@@ -6,6 +6,8 @@ public class Player {
     private int playerWickets;
     private int totalRuns=0;
     private int totalWickets=0;
+    private int highRun=0;
+    private int highWicket=0;
 
     public Player(String playerName,int playerAge, String playerType,int playerRuns,int playerWickets){
         this.playerName=playerName;
@@ -15,16 +17,28 @@ public class Player {
         this.playerWickets=playerWickets;
     }
 
-    int displayHighest(int runs){        //checks all the run values entered by user and display the highest score of the player
-        int highNow = runs;
+    int displayHighestRuns(int runs){        //checks all the run values entered by user and display the highest score of the player
+        highRun = runs;
         for(int x=0;x<15;x++)
         {
-            if(runs>highNow)    //compares the new runs value to the current highest and make changes
+            if(runs>highRun)    //compares the new runs value to the current highest and make changes
             {
-                highNow=runs;
+                highRun=runs;
             }
         }
-    return highNow;
+    return highRun;
+    }
+
+    int displayHighestWickets(int wickets){        //checks all the wicket values entered by user and display the highest wickets of the player
+        highWicket = wickets;
+        for(int x=0;x<15;x++)
+        {
+            if(wickets>highWicket)    //compares the new runs value to the current highest and make changes
+            {
+                highWicket=wickets;
+            }
+        }
+        return highWicket;
     }
 
     int displayBattingAvg(int runs){    //calculate and display the average of 15 runs values
@@ -50,8 +64,10 @@ public class Player {
         System.out.println("Player Age:"+playerAge);
         System.out.println("Player Type:"+playerType);
         System.out.println("Player Total Runs:"+totalRuns);
-        System.out.println("Player Total Wickets:"+totalWickets);
-
+        System.out.println("Total Wickets:"+totalWickets);
+        System.out.println("Total Runs:"+totalRuns);
+        System.out.println("Highest Score:"+highRun);
+        System.out.println("Highest Score:"+highWicket);
     }
 
 }
