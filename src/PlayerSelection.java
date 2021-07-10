@@ -47,7 +47,9 @@ public class PlayerSelection {
         bowlingPlayerRatings. add (821);
         bowlingPlayerRatings. add (702);
 
-        ArrayList<String> addedPlayerDetails = new ArrayList<String>();
+        ArrayList<String> addedPlayerNames = new ArrayList<String>();
+        ArrayList<Integer> addedPlayerAges = new ArrayList<Integer>();
+        ArrayList<String> addedPlayerCountries = new ArrayList<String>();
 
 
 
@@ -58,7 +60,7 @@ public class PlayerSelection {
             System.out.println(" ");
             System.out.println("To Add a batting player name                  : Press A");
             System.out.println("To Add a bowling player name                  : Press E");
-            System.out.println("To Add a wicket keeper                        : Press F");
+            System.out.println("To Add a Wicket Keeper                        : Press F");
             System.out.println("To Display the two  best batmen               : Press B");
             System.out.println("To Display the two best bowlers               : Press C");
             System.out.println("To Display the best Keeper                    : Press D");
@@ -76,15 +78,15 @@ public class PlayerSelection {
                     System.out.println("Enter the  Player Name   : ");
                     String playerName= input.next();
                     battingPlayerNames.add(playerName);
-                    addedPlayerDetails.add(playerName);
+                    addedPlayerNames.add(playerName);
 
                     System.out.println("Enter the Player Age  : ");
                     int playerAge= input.nextInt();
-                    addedPlayerDetails.add(String.valueOf(playerAge));
+                    addedPlayerAges.add(playerAge);
 
                     System.out.println("Enter the Player Country  : ");
                     String playerCountry= input.next();
-                    addedPlayerDetails.add(playerCountry);
+                    addedPlayerCountries.add(playerCountry);
 
 
                     Player player1 = new Player ( playerName,playerAge,playerCountry);
@@ -140,9 +142,12 @@ public class PlayerSelection {
                     break;
 
                 case "V"://newest player details
-                    System.out.println("Player Name: "+addedPlayerDetails.get(0));
-                    System.out.println("Player Age:  "+addedPlayerDetails.get(1));
-                    System.out.println("Player Country:  "+addedPlayerDetails.get(2));
+                    for (int i = 0; i < addedPlayerNames.size(); i++) {
+                        System.out.println("Player Name: " + addedPlayerNames.get(i));
+                        System.out.println("Player Age:  " + addedPlayerAges.get(i));
+                        System.out.println("Player Country:  " + addedPlayerCountries.get(i));
+                        System.out.println(" ");
+                    }
 
 
 
