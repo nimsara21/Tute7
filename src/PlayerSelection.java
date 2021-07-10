@@ -14,11 +14,11 @@ public class PlayerSelection {
 
 
         while (true) {
-            System.out.println("Add a Player:                 Press A\n" +
-                    "View all Players:              Press V\n" +
-                    "Display Two Best Batsman:      Press B\n" +
-                    "Display Two Best Bowlers:      Press C\n"+
-                    "Display Two Best Keepers:      Press D\n");
+            System.out.println("Add a Player:                  Press A");
+            System.out.println("View all Players:              Press V");
+            System.out.println("Display Two Best Batsman:      Press B");
+            System.out.println("Display Two Best Bowlers:      Press C");
+            System.out.println("Display Two Best Keepers:      Press D");
 
             String let = input.next();
             switch (let) {
