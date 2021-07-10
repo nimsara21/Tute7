@@ -86,11 +86,8 @@ public class PlayerSelection {
                     String playerCountry= input.next();
                     addedPlayerDetails.add(playerCountry);
 
-                    System.out.println("Enter the player Type: ");
-                    String playerType= input.next();
-                    addedPlayerDetails.add(playerType);
 
-                    Player player1 = new Player ( playerName,playerAge,playerCountry,playerType);
+                    Player player1 = new Player ( playerName,playerAge,playerCountry);
                     break;
 
 
@@ -145,8 +142,7 @@ public class PlayerSelection {
                 case "V":
                     System.out.println("Player Name: "+addedPlayerDetails.get(0));
                     System.out.println("Player Age:  "+addedPlayerDetails.get(1));
-                    System.out.println("Player Type:  "+addedPlayerDetails.get(2));
-                    System.out.println("Player Country:  "+addedPlayerDetails.get(3));
+                    System.out.println("Player Country:  "+addedPlayerDetails.get(2));
 
 
 

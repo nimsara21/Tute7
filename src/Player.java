@@ -19,7 +19,7 @@ public class Player {
         this.playerWickets=playerWickets;
 
     }
-    Player(String playerName,int playerAge, String playerCountry,String playerType){
+    Player(String playerName, int playerAge, String playerCountry){
         this.playerName=playerName;
         this.playerAge=playerAge;
         this.playerCountry=playerCountry;
