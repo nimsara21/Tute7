@@ -33,12 +33,12 @@ public class PlayerSelection {
         battingplayerRatings. add (828);
         battingplayerRatings. add (694);
 
-        ArrayList<Integer> wicketKeepingplayerRatings = new ArrayList<Integer>();
-        wicketKeepingplayerRatings. add (285);
-        wicketKeepingplayerRatings. add (238);
-        wicketKeepingplayerRatings. add (159);
-        wicketKeepingplayerRatings. add (158);
-        wicketKeepingplayerRatings. add (153);
+        ArrayList<Integer> wicketKeepingPlayerRatings = new ArrayList<Integer>();
+        wicketKeepingPlayerRatings. add (285);
+        wicketKeepingPlayerRatings. add (238);
+        wicketKeepingPlayerRatings. add (159);
+        wicketKeepingPlayerRatings. add (158);
+        wicketKeepingPlayerRatings. add (153);
 
         ArrayList<Integer> bowlingPlayerRatings = new ArrayList<Integer>();
         bowlingPlayerRatings. add (695);
@@ -76,7 +76,7 @@ public class PlayerSelection {
             switch (press) {
                 case "A": //Adding a new Batsman
                     System.out.println("Enter the  Player Name   : ");
-                    String playerName= input.next();
+                    String playerName = input.next();
                     battingPlayerNames.add(playerName);
                     addedPlayerNames.add(playerName);
 
@@ -89,20 +89,38 @@ public class PlayerSelection {
                     addedPlayerCountries.add(playerCountry);
 
 
-                    Player player1 = new Player ( playerName,playerAge,playerCountry);
                     break;
 
 
 
                 case"E": //Adding a New Bowler
-                    System.out.println("Please enter the bowler name : ");
-                    String b= input.next();
-                    bowlingplayerNames .add(b);
+                    System.out.println("Please enter the bowler Name : ");
+                    String b = input.next();
+                    bowlingplayerNames.add(b);
+                    addedPlayerNames.add(b);
+
+                    System.out.println("Enter the Player Age  : ");
+                    int playerAge2 = input.nextInt();
+                    addedPlayerAges.add(playerAge2);
+
+                    System.out.println("Enter the Player Country  : ");
+                    String playerCountry2= input.next();
+                    addedPlayerCountries.add(playerCountry2);
                     break;
+
                 case"F":
-                    System.out.println("Please enter the wicket keeper name : ");
-                    String c= input.next();
-                    wicketKeepingPlayerNames .add(c);
+                    System.out.println("Please enter the Wicket Keeper Name : ");
+                    String c = input.next();
+                    wicketKeepingPlayerNames.add(c);
+                    addedPlayerNames.add(c);
+
+                    System.out.println("Enter the Player Age  : ");
+                    int playerAge3 = input.nextInt();
+                    addedPlayerAges.add(playerAge3);
+
+                    System.out.println("Enter the Player Country  : ");
+                    String playerCountry3= input.next();
+                    addedPlayerCountries.add(playerCountry3);
                     break;
 
                 case "B":
@@ -132,8 +150,8 @@ public class PlayerSelection {
                 case "D":
                     int n=0;
                     for (int i=1; i<5 ; i++){
-                        if (wicketKeepingplayerRatings.get(i) > wicketKeepingplayerRatings.get(0)) {
-                            int highestRating = wicketKeepingplayerRatings.get(i);
+                        if (wicketKeepingPlayerRatings.get(i) > wicketKeepingPlayerRatings.get(0)) {
+                            int highestRating = wicketKeepingPlayerRatings.get(i);
                             n= i;
                         }
                     }
