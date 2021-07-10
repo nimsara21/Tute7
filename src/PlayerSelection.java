@@ -25,7 +25,7 @@ public class PlayerSelection {
                 case "V":
                     System.out.println(Players);
                     break;
-                case "A":
+                case "A":  //Adding a new Player
                     System.out.println("Player Name: ");
                     String PlayerName = input.next();
                     Players.add(PlayerName);
