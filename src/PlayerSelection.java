@@ -72,7 +72,7 @@ public class PlayerSelection {
             //Player player1= new Player();
 
             switch (press) {
-                case "A":
+                case "A": //Adding a new Batsman
                     System.out.println("Enter the  Player Name   : ");
                     String playerName= input.next();
                     battingPlayerNames.add(playerName);
@@ -92,7 +92,7 @@ public class PlayerSelection {
 
 
 
-                case"E":
+                case"E": //Adding a New Bowler
                     System.out.println("Please enter the bowler name : ");
                     String b= input.next();
                     bowlingplayerNames .add(b);
