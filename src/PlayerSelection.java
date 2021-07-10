@@ -139,7 +139,7 @@ public class PlayerSelection {
 
                     break;
 
-                case "V":
+                case "V"://newest player details
                     System.out.println("Player Name: "+addedPlayerDetails.get(0));
                     System.out.println("Player Age:  "+addedPlayerDetails.get(1));
                     System.out.println("Player Country:  "+addedPlayerDetails.get(2));
