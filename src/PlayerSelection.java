@@ -1,38 +1,31 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
-    public class PlayerSelection {
+public class PlayerSelection {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        System.out.println("Enter the  player name   : ");
-        String playerName= input.next();
-        System.out.println("Enter the player age  : ");
-        int playerAge= input.nextInt();
-        System.out.println("Enter the player country  : ");
-        String playerCountry= input.next();
-        System.out.println("Enter the player type: ");
-        String playerType= input.next();
+        // Entering data in to ArrayLists.
 
-        ArrayList<String> battingplayerNames = new ArrayList<String>();
-        battingplayerNames. add("Dawid Malan-   BAT RATING-888");
-        battingplayerNames. add("Virat Kohli-   BAT RATING-702");
-        battingplayerNames. add("Martin Guptill-BAT RATING-688");
-        battingplayerNames. add("Babar Azam-    BAT RATING-828");
-        battingplayerNames. add("Glenn Maxwell- BAT RATING-694");
+        ArrayList<String> battingPlayerNames = new ArrayList<String>();
+        battingPlayerNames. add("Dawid Malan-   BAT RATING-888");
+        battingPlayerNames. add("Virat Kohli-   BAT RATING-702");
+        battingPlayerNames. add("Martin Guptill-BAT RATING-688");
+        battingPlayerNames. add("Babar Azam-    BAT RATING-828");
+        battingPlayerNames. add("Glenn Maxwell- BAT RATING-694");
 
-        ArrayList<String> wiketKeepingplayerNames = new ArrayList<String>();
-        wiketKeepingplayerNames. add("Mohammad Nabi-  285");
-        wiketKeepingplayerNames. add("Shakib AI Hasan-238");
-        wiketKeepingplayerNames. add("Khawar-         159");
-        wiketKeepingplayerNames. add("Sean Williams-  158");
-        wiketKeepingplayerNames. add("Collins Obuya-  153");
+        ArrayList<String> wicketKeepingPlayerNames = new ArrayList<String>();
+        wicketKeepingPlayerNames. add("Mohammad Nabi-  285");
+        wicketKeepingPlayerNames. add("Shakib AI Hasan-238");
+        wicketKeepingPlayerNames. add("Khawar-         159");
+        wicketKeepingPlayerNames. add("Sean Williams-  158");
+        wicketKeepingPlayerNames. add("Collins Obuya-  153");
 
         ArrayList<String> bowlingplayerNames = new ArrayList<String>();
         bowlingplayerNames. add("Adil Rashid-     BOWLING RATING-695");
         bowlingplayerNames. add("Wanindu De Silva-B0WLING RATING-693");
         bowlingplayerNames. add("Ish Sodhi-       BOWLING RATING-640");
-        bowlingplayerNames. add("Tabraiz-         BOWLING RATING-821");
         bowlingplayerNames. add("Ashton Agar-     B0WLING RATING-702");
+        bowlingplayerNames. add("Tabraiz-         BOWLING RATING-821");
 
         ArrayList<Integer> battingplayerRatings = new ArrayList<Integer>();
         battingplayerRatings. add (888);
@@ -41,98 +34,144 @@ import java.util.Scanner;
         battingplayerRatings. add (828);
         battingplayerRatings. add (694);
 
-        ArrayList<Integer> wicketKeepingplayerRatings = new ArrayList<Integer>();
-        wicketKeepingplayerRatings. add (285);
-        wicketKeepingplayerRatings. add (238);
-        wicketKeepingplayerRatings. add (159);
-        wicketKeepingplayerRatings. add (158);
-        wicketKeepingplayerRatings. add (153);
+        ArrayList<Integer> wicketKeepingPlayerRatings = new ArrayList<Integer>();
+        wicketKeepingPlayerRatings. add (285);
+        wicketKeepingPlayerRatings. add (238);
+        wicketKeepingPlayerRatings. add (159);
+        wicketKeepingPlayerRatings. add (158);
+        wicketKeepingPlayerRatings. add (153);
 
-        ArrayList<Integer> bowlingplayerRatings = new ArrayList<Integer>();
-        bowlingplayerRatings. add (695);
-        bowlingplayerRatings. add (693);
-        bowlingplayerRatings. add (640);
-        bowlingplayerRatings. add (821);
-        bowlingplayerRatings. add (702);
+        ArrayList<Integer> bowlingPlayerRatings = new ArrayList<Integer>();
+        bowlingPlayerRatings. add (695);
+        bowlingPlayerRatings. add (693);
+        bowlingPlayerRatings. add (640);
+        bowlingPlayerRatings. add (821);
+        bowlingPlayerRatings. add (702);
 
-       
-        Player player1 = new Player ( playerName,playerAge,playerCountry,playerType);
+        ArrayList<String> addedPlayerNames = new ArrayList<String>();
+        ArrayList<Integer> addedPlayerAges = new ArrayList<Integer>();
+        ArrayList<String> addedPlayerCountries = new ArrayList<String>();
+
+
+
+
         String pressletter = "";
+        // User menu options.
+        while (true) {
+            System.out.println(" ");
+            System.out.println("To Add a batting player name                  : Press A");
+            System.out.println("To Add a bowling player name                  : Press E");
+            System.out.println("To Add a Wicket Keeper                        : Press F");
+            System.out.println("To Display the two  best batmen               : Press B");
+            System.out.println("To Display the two best bowlers               : Press C");
+            System.out.println("To Display the best Keeper                    : Press D");
+            System.out.println("To View Last Added player  details            : Press V");
+            System.out.println("To Exit                                       : Press Q");
+            System.out.println(" ");
 
-        while (pressletter != "Q ") {
-            System.out.println("To Add a batting player name   : Press A");
-            System.out.println("To Add a  bowling player name  : Press E");
-            System.out.println("To Add a wicket keeper         : Press F");
-            System.out.println("TO Display the  best batmen    : Press B");
-            System.out.println("To Display the  best bowler    : Press C");
-            System.out.println("To Display the best keeper     : Press D");
-            System.out.println("To View player  details        : Press V");
-            System.out.println("To Exit                        : Press Q");
-
-            System.out.println("Enter the Press letter:  ");
+            System.out.print("Enter the Press letter:  ");
+            System.out.println(" ");
             String press = input.next();
-             //Player player1= new Player();
+
 
             switch (press) {
-                case "A":
-                    System.out.println("Please enter the batting player name : ");
-                    String a= input.next();
-                    battingplayerNames .add(a);
-                    break;
-                case"E":
-                    System.out.println("Please enter the bowler name : ");
-                    String b= input.next();
-                    bowlingplayerNames .add(b);
-                    break;
-                case"F":
-                    System.out.println("Please enter the wicket keeper name : ");
-                    String c= input.next();
-                    wiketKeepingplayerNames .add(c);
+                case "A": //Adding a new Batsman
+                    System.out.println("Enter the  Player Name   : ");
+                    String battingplayerName = input.next();
+                    battingPlayerNames.add(battingplayerName);
+                    addedPlayerNames.add(battingplayerName);
+
+                    System.out.println("Enter the Player Age  : ");
+                    int battingplayerAge= input.nextInt();
+                    addedPlayerAges.add(battingplayerAge);
+
+                    System.out.println("Enter the Player Country  : ");
+                    String battingplayerCountry= input.next();
+                    addedPlayerCountries.add(battingplayerCountry);
                     break;
 
-                case "B":
+                case"E": //Adding a New Bowler
+                    System.out.println("Please enter the bowler Name : ");
+                    String bowlerName = input.next();
+                    bowlingplayerNames.add(bowlerName);
+                    addedPlayerNames.add(bowlerName);
+
+                    System.out.println("Enter the Player Age  : ");
+                    int bowlerAge = input.nextInt();
+                    addedPlayerAges.add(bowlerAge);
+
+                    System.out.println("Enter the Player Country  : ");
+                    String bowlerCountry= input.next();
+                    addedPlayerCountries.add(bowlerCountry);
+                    break;
+
+                case"F":   // Adding a New Wicket Keeper
+                    System.out.println("Please enter the Wicket Keeper Name : ");
+                    String keeperName = input.next();
+                    wicketKeepingPlayerNames.add(keeperName);
+                    addedPlayerNames.add(keeperName);
+
+                    System.out.println("Enter the Player Age  : ");
+                    int keeperAge= input.nextInt();
+                    addedPlayerAges.add(keeperAge);
+
+                    System.out.println("Enter the Player Country  : ");
+                    String keeperCountry = input.next();
+                    addedPlayerCountries.add(keeperCountry);
+                    break;
+
+                case "B": // Displaying the two best batmen.
                     int p=0;
                     for (int i=1; i<5 ; i++){
                         if (battingplayerRatings.get(i) > battingplayerRatings.get(0)) {
-                            int higestRating = battingplayerRatings.get(i);
+                            int highestRating = battingplayerRatings.get(i);
                             p = i;
                         }
                     }
-                    System.out.println("The best batmen is " +  battingplayerNames.get(p));
+                    System.out.println("The best batmen is " +  battingPlayerNames.get(p));
+                    System.out.println("The Second best batmen is " +  battingPlayerNames.get(p+1));
                     break;
 
-                case "C":
+                case "C":  // Displaying the best two best bowlers
                     int m=0;
                     for (int i=1; i<5 ; i++){
-                        if (bowlingplayerRatings.get(i) > bowlingplayerRatings.get(0)) {
-                            int higestRating = bowlingplayerRatings.get(i);
+                        if (bowlingPlayerRatings.get(i) > bowlingPlayerRatings.get(0)) {
+                            int highestRating = bowlingPlayerRatings.get(i);
                             m= i;
                         }
                     }
                     System.out.println("The best bowler is "+ bowlingplayerNames.get(m));
+                    System.out.println("The Second Best Bowler is "+ bowlingplayerNames.get(m - 1));
 
                     break;
 
-                case "D":
+                case "D": // Displaying the best wicket keeper
                     int n=0;
                     for (int i=1; i<5 ; i++){
-                        if (wicketKeepingplayerRatings.get(i) > wicketKeepingplayerRatings.get(0)) {
-                            int higestRating = wicketKeepingplayerRatings.get(i);
+                        if (wicketKeepingPlayerRatings.get(i) > wicketKeepingPlayerRatings.get(0)) {
+                            int highestRating = wicketKeepingPlayerRatings.get(i);
                             n= i;
                         }
                     }
-                    System.out.println("The best wicket keeper is "+ wiketKeepingplayerNames.get(n));
+                    System.out.println("The best wicket keeper is "+ wicketKeepingPlayerNames.get(n));
 
                     break;
 
-                case "V":
-                    player1.displayPlayerDetails();
+                case "V":// Displaying the newest player details
+                    for (int i = 0; i < addedPlayerNames.size(); i++) {
+                        System.out.println("Player Name: " + addedPlayerNames.get(i));
+                        System.out.println("Player Age:  " + addedPlayerAges.get(i));
+                        System.out.println("Player Country:  " + addedPlayerCountries.get(i));
+                        System.out.println(" ");
+                    }
                     break;
 
                 case "Q":
                     pressletter = "Q";
                     break;
 
+                default :
+                    System.out.println("Wrong Value");
 
             }
         }
