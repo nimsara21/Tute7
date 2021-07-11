@@ -165,11 +165,17 @@ public class PlayerSelection {
                     break;
 
                 case "V"://newest player details
-                    for (int i = 0; i < addedPlayerNames.size(); i++) {
-                        System.out.println("Player Name: " + addedPlayerNames.get(i));
-                        System.out.println("Player Age:  " + addedPlayerAges.get(i));
-                        System.out.println("Player Country:  " + addedPlayerCountries.get(i));
-                        System.out.println(" ");
+                    boolean empAL = addedPlayerNames.isEmpty();
+                    if (empAL){
+                        System.out.println("No New Players Added");
+                    }
+                    else {
+                        for (int i = 0; i < addedPlayerNames.size(); i++) {
+                            System.out.println("Player Name: " + addedPlayerNames.get(i));
+                            System.out.println("Player Age:  " + addedPlayerAges.get(i));
+                            System.out.println("Player Country:  " + addedPlayerCountries.get(i));
+                            System.out.println(" ");
+                        }
                     }
 
 
