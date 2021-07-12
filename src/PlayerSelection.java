@@ -20,11 +20,15 @@ public class PlayerSelection {
         wicketKeepingPlayerNames. add("Collins Obuya-  153");
 
         ArrayList<String> bowlingplayerNames = new ArrayList<String>();
+
+
         bowlingplayerNames. add("Adil Rashid-     BOWLING RATING-695");
         bowlingplayerNames. add("Wanindu De Silva-B0WLING RATING-693");
         bowlingplayerNames. add("Ish Sodhi-       BOWLING RATING-640");
-        bowlingplayerNames. add("Tabraiz-         BOWLING RATING-821");
         bowlingplayerNames. add("Ashton Agar-     B0WLING RATING-702");
+        bowlingplayerNames. add("Tabraiz-         BOWLING RATING-821");
+
+
 
         ArrayList<Integer> battingplayerRatings = new ArrayList<Integer>();
         battingplayerRatings. add (888);
@@ -144,6 +148,7 @@ public class PlayerSelection {
                         }
                     }
                     System.out.println("The best bowler is "+ bowlingplayerNames.get(m));
+                    System.out.println("The Second Best Bowler is "+ bowlingplayerNames.get(m - 1));
 
                     break;
 
@@ -160,11 +165,17 @@ public class PlayerSelection {
                     break;
 
                 case "V"://newest player details
-                    for (int i = 0; i < addedPlayerNames.size(); i++) {
-                        System.out.println("Player Name: " + addedPlayerNames.get(i));
-                        System.out.println("Player Age:  " + addedPlayerAges.get(i));
-                        System.out.println("Player Country:  " + addedPlayerCountries.get(i));
-                        System.out.println(" ");
+                    boolean empAL = addedPlayerNames.isEmpty();
+                    if (empAL){
+                        System.out.println("No New Players Added");
+                    }
+                    else {
+                        for (int i = 0; i < addedPlayerNames.size(); i++) {
+                            System.out.println("Player Name: " + addedPlayerNames.get(i));
+                            System.out.println("Player Age:  " + addedPlayerAges.get(i));
+                            System.out.println("Player Country:  " + addedPlayerCountries.get(i));
+                            System.out.println(" ");
+                        }
                     }
 
 
